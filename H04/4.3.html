@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #slideholder {
+            height: 200px;
+            width: 600px;
+            border: 3px black solid;
+            transition: 1s;
+            clear: both;
+            margin: auto;
+        }
+
+        #slideholder2 {
+            height: 200px;
+            width: 600px;
+            border: 3px black solid;
+            transition: 1s;
+            clear: both;
+            margin: auto;
+        }
+
+        #slideholder3 {
+            height: 200px;
+            width: 600px;
+            border: 3px black solid;
+            transition: 1s;
+            clear: both;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="slideholder"></div>
+<div id="slideholder2"></div>
+<div id="slideholder3"></div>
+
+<script>
+// Slide1
+
+var plaatjes = [1, 2, 3,];
+var teller = 0;
+var slideholder = document.getElementById("slideholder");
+slideholder.style.backgroundImage = "url('../resources/Voorhoofd1.png')";
+
+slideholder.addEventListener("click", function () {
+    slideholder.style.backgroundImage = "url('../resources/Voorhoofd" + getVoorhoofd() + ".png')";
+});
+
+function getVoorhoofd() {
+    if (teller >= plaatjes.length) {
+        teller = 1;
+    } else {
+        teller++;
+    }
+    console.log(teller);
+    return teller;
+}
+
+// slide2
+var plaatjes = [1, 2, 3,];
+var teller = 0;
+var slideholder2 = document.getElementById("slideholder2");
+slideholder2.style.backgroundImage = "url('../resources/Neus1.png')";
+
+slideholder2.addEventListener("click", function () {
+    slideholder2.style.backgroundImage = "url('../resources/Neus" + getNeus() + ".png')";
+});
+
+function getNeus() {
+    if (teller >= plaatjes.length) {
+        teller = 1;
+    } else {
+        teller++;
+    }
+    console.log(teller);
+    return teller;
+}
+
+// slide3
+var plaatjes = [1, 2, 3,];
+var teller = 0;
+var slideholder3 = document.getElementById("slideholder3");
+slideholder3.style.backgroundImage = "url('../resources/Kin1.png')";
+
+slideholder3.addEventListener("click", function () {
+    slideholder3.style.backgroundImage = "url('../resources/Kin" + getKin() + ".png')";
+});
+
+function getKin() {
+    if (teller >= plaatjes.length) {
+        teller = 1;
+    } else {
+        teller++;
+    }
+    console.log(teller);
+    return teller;
+}
+
+
+
+
+</script>
+
+</body>
+</html>

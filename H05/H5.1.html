@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body{
+            font-family: Serif;
+            text-align: center;
+        }
+        div.doggopicture {
+            height: 450px;
+            width: 300px;
+            float: left;
+            background-color: red;
+        }
+        #pics {
+            width: 900px;
+            height: 1350px;
+            border: solid 1px black;
+            font-size: 0px;
+            margin: auto;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Doggochooser</h1>
+<h3>Choose your favourite Doggo</h3>
+<div id="pics">
+
+</div>
+
+
+<script>
+    pics = document.getElementById("pics");
+    nieuwElement = document.createElement("div");
+    nieuwElement.className = "Doggopicture";
+    pics.appendChild(nieuwElement);
+    
+</script>
+</body>
+</html>

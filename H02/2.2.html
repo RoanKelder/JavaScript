@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    html  {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+
+    }
+    body{
+        font-family: Serif;
+        text-align: center ;
+    }
+
+    img {
+    height: 300px;
+    width: 300px;
+    border: 0px;
+
+}
+    #pics{
+        width: 900px;
+        height: 900px;
+        border: solid 1px black;
+        font-size: 0px;
+        margin: auto;
+
+    }
+
+
+
+</style>
+
+<body>
+<h1>Doggo Shuffle</h1>
+<div id="pics">
+<img src="../resources/Doggo1.jfif" alt="Doggo1">
+<img src="../resources/Doggo2.jfif" alt="Doggo2">
+<img src="../resources/Doggo3.jfif" alt="Doggo3">
+<img src="../resources/Doggo4.jfif" alt="Doggo4">
+<img src="../resources/Doggo5.jfif" alt="Doggo5">
+<img src="../resources/Doggo6.jfif" alt="Doggo6">
+<img src="../resources/Doggo7.jfif" alt="Doggo7">
+<img src="../resources/Doggo8.jfif" alt="Doggo8">
+<img src="../resources/Doggo9.jfif" alt="Doggo9">
+</div>
+
+
+<script>
+    var plaatjes = document.getElementsByTagName("img");
+    var random = 0;
+
+    var randomNumbers = [];
+
+    while(randomNumbers.length < 9){
+        random = Math.floor(Math.random() * 9) + 1;
+        if (randomNumbers.lastIndexOf(random) == -1){
+            randomNumbers.push(random);
+        }
+    }
+
+    random = 0;
+    for(var plaatje in plaatjes) {
+        plaatjes[plaatje].src = "../resources/Doggo" + randomNumbers[random] + ".jfif";
+        random++;
+
+    }
+
+
+    //  for (var i = 0; i < plaatjes.length; i++) {
+    //      random = Math.floor(Math.random() * 9) + 1;
+    //      plaatjes[i].src = "../resources/Doggo" + random + ".jfif"
+    //
+    // }
+
+</script>
+</body>
+</html>
