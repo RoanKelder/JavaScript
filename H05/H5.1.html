@@ -5,16 +5,19 @@
     <title>Title</title>
 
     <style>
-        body{
+        body {
             font-family: Serif;
             text-align: center;
         }
-        div.doggopicture {
+
+        div.Doggopicture {
             height: 450px;
             width: 300px;
             float: left;
             background-color: red;
+
         }
+
         #pics {
             width: 900px;
             height: 1350px;
@@ -31,14 +34,28 @@
 <div id="pics">
 
 </div>
-
-
 <script>
     pics = document.getElementById("pics");
-    nieuwElement = document.createElement("div");
-    nieuwElement.className = "Doggopicture";
-    pics.appendChild(nieuwElement);
-    
+    createPicsHolders()
+    createDoggoImages()
+
+    function createPicsHolders() {
+        for (var i = 0; i < 9; i++) {
+            pictureHolders = document.createElement("div");
+            pictureHolders.className = "Doggopicture";
+            pictureHolders.id = "picture-holder-" + i;
+            pics.appendChild(pictureHolders);
+        }
+    }
+
+    function  createDoggoImages() {
+        pictureHolders = document.getElementsByClassName("Doggopicture")
+        for (var i =0; i < pictureHolders.length; i++) {
+           Doggoplaatje = document.createElement("img");
+           Doggoplaatje.src = "../resources/Doggo" + (i+1) + ".jpg";
+           pictureHolders[i].appendChild(Doggoplaatje);
+        }
+    }
 </script>
 </body>
 </html>
